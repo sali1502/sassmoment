@@ -4,7 +4,7 @@
   "description": "**Moment 3 - SASS**<br>\r ***I den här laborationen ska SASS användas.<br>\r Variabler, color functions, nesting, mixins, extend/inheritence, if/else-satser och partials ska ingå.<br>\r Ljust och mörkt tema ska även skapas med media queries.***",
   "source": "src/index.html",
   "scripts": {
-    "start": "parcel",
+    "start": "parcel --open firefox",
     "build": "parcel build"
   },
   "browserslist": ">0.5%, last 2 versions, not dead",
