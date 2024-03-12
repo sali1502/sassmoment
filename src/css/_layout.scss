@@ -266,6 +266,7 @@ footer p {
 
 }
 
+
 /* Visar en kolumn för litet läge, mobiltelefon */
 
 @media only screen and (max-width: 800px) {
@@ -290,3 +291,17 @@ footer p {
     
 }
 
+@media (prefers-color-scheme: dark) {
+
+    body {
+        background-color: base.$primary-bg-darkm !important;
+        color: base.$primary-text-darkm !important;
+    }
+
+    h1 {
+        color: base.$primary-heading-darkm !important;
+    }
+    
+}
+
+    
