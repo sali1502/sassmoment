@@ -4,7 +4,6 @@ $primary-green: #5F8575;
 $dark-green: darken($primary-green, 20%);
 $light-green: lighten($primary-green, 20%);
 
-
 // Variabler färger
 $black: #000;
 $white: #fff;
@@ -22,3 +21,10 @@ $primary-bg-darkm: $grey;
 $primary-heading-darkm: $white;
 $primary-header-footer-darkm: $light-green;
 
+// Mixin
+@mixin circle ($width, $height, $color) {
+    width: $width;
+    height: $height;
+    background: $color;
+    border-radius: 50%;
+}
