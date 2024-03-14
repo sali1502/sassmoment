@@ -164,122 +164,142 @@ p {
     font-size: 1em;
     line-height: 1.8em;
     text-align: left;
-        color: base.$primary-text;
-        max-width: 550px;
-    }
-    
+    color: base.$primary-text;
+    max-width: 550px;
+}
+
+ul {
+    margin: 0 auto 0 auto;
+    text-align: left;
+    font-size: 1em;
+    line-height: 1.8em;
+    color: base.$primary-text;
+    max-width: 550px;
+}
+
+.space1 {
+    height: 4vh;
+}
+
+.space2 {
+    height: 2vh;
+}
+
+.text-container {
+    margin: 0 auto 0 auto;
+    text-align: left;
+    font-size: 1em;
+    line-height: 1.8em;
+    color: base.$primary-text;
+    max-width: 600px;
+}
+
+footer {
+    font-size: 0.9em;
+    line-height: 2em;
+    height: auto;
+    background-color: base.$light-green;
+    margin-top: 4vh;
+    position: relative;
+    padding-right: 10vw;
+    padding-left: 10vw;
+    padding-top: 2vh;
+    padding-bottom: 2vh;
+    width: 100%;
+    text-align: center;
+    font-weight: 400;
+    max-width: 1512px;
+}
+
+footer p {
+    color: base.$primary-text;
+    text-align: center;
+}
+
+.image-container {
+    display: block;
+    justify-content: center;
+    margin: 0 auto 0 auto;
+    text-align: center;
+    max-width: 900px;
+}
+
+.text {
+    color: base.$primary-text;
+}
+
+// Mixins
+.onedot {
+    margin: 0 auto;
+    margin-bottom: 2vh;
+    @include base.circle (10px, 10px, base.$light-green);
+}
+
+.twodot {
+    margin: 0 auto;
+    margin-bottom: 2vh;
+    @include base.circle (10px, 10px, base.$primary-green);
+}
+
+.threedot {
+    margin: 0 auto;
+    margin-bottom: 2vh;
+    @include base.circle (10px, 10px, base.$dark-green);
+}
+
+.arrow {
+    margin: 0 auto;
+    margin-top: 2vh;
+    margin-bottom: 2vh;
+    @include base.triangle (16px, base.$dark-green, down);
+}
+ 
+// Selector inheritance
+.dotone {
+    @extend .onedot;
+}
+.dottwo {
+    @extend .twodot;
+}
+
+.container-dot-header {
+    margin: 0 auto 0 auto;
+    text-align: center;
+    padding-top: 4vh;
+    padding-bottom: 2vh;
+    max-width: 550px;
+}
+
+.dot-header {
+    display: inline-block;
+}
+
+// Nästlad lista
+div {
+
+    margin: 0 auto;
+
     ul {
-        margin: 0 auto 0 auto;
-        text-align: left;
-        font-size: 1em;
-        line-height: 1.8em;
-        color: base.$primary-text;
-        max-width: 550px;
-    }
-    
-    .space1 {
-        height: 4vh;
-    }
-    
-    .space2 {
-        height: 2vh;
-    }
-    
-    .text-container {
-        margin: 0 auto 0 auto;
-        text-align: left;
-        font-size: 1em;
-        line-height: 1.8em;
-        color: base.$primary-text;
-        max-width: 600px;
-    }
-    
-    footer {
-        font-size: 0.9em;
-        line-height: 2em;
-        height: auto;
-        background-color: base.$light-green;
-        margin-top: 4vh;
-        position: relative;
-        padding-right: 10vw;
-        padding-left: 10vw;
+        padding: 0;
+        color: aqua;
+        padding-left: 4vw;
         padding-top: 2vh;
         padding-bottom: 2vh;
-        width: 100%;
-        text-align: center;
-        font-weight: 400;
-        max-width: 1512px;
     }
-    
-    footer p {
-        color: base.$primary-text;
-        text-align: center;
+
+    li {
+        color: base.$primary-green;
+        padding-left: 6px;
     }
-    
-    .image-container {
-        display: block;
-        justify-content: center;
-        margin: 0 auto 0 auto;
-        text-align: center;
-        max-width: 900px;
+
+    a {
+        color: base.$black;
+        padding-left: 6px;
+        padding-top: 6px;
+        text-decoration: none;
     }
-    
-    .text {
-        color: base.$primary-text;
-    }
-    
-    // Mixins
-    .onedot {
-        margin: 0 auto;
-        margin-bottom: 2vh;
-        @include base.circle (10px, 10px, base.$light-green);
-    }
-    
-    .twodot {
-        margin: 0 auto;
-        margin-bottom: 2vh;
-        @include base.circle (10px, 10px, base.$primary-green);
-    }
-    
-    .threedot {
-        margin: 0 auto;
-        margin-bottom: 2vh;
-        @include base.circle (10px, 10px, base.$dark-green);
-    }
-    
-    .arrow {
-        margin: 0 auto;
-        margin-top: 2vh;
-        margin-bottom: 2vh;
-        @include base.triangle (16px, base.$dark-green, down);
-    }
-    
-    // Nästlad lista
-    div {
-    
-        margin: 0 auto;
-    
-        ul {
-            padding: 0;
-            color: aqua;
-            padding-left: 4vw;
-            padding-top: 2vh;
-            padding-bottom: 2vh;
-        }
-    
-        li {
-            color: base.$light-green;
-            padding-left: 6px;
-        }
-    
-        a {
-            color: base.$black;
-            padding-left: 6px;
-            padding-top: 6px;
-            text-decoration: none;
-        }
-    
-    }
+
+}
 
 /* Media querys */
 
@@ -301,7 +321,7 @@ p {
     .text {
         color: base.$primary-text-darkm !important;
     }
-    
+
 }
 
 /* Större skärm - gör menyn som inline */
@@ -358,14 +378,12 @@ p {
         color: base.$primary-text;
         max-width: 550px;
     }
-    
+
     .image-container {
         display: block;
         justify-content: center;
         margin: 0 auto 0 auto;
         text-align: center;
     }
-    
-}
 
-    
+}
