@@ -1,3 +1,4 @@
+@use "sass:math";
 
 // Variabler color functions
 $primary-green: #5F8575;
@@ -27,4 +28,24 @@ $primary-header-footer-darkm: $light-green;
     height: $height;
     background: $color;
     border-radius: 50%;
+}
+
+// If-else sats
+
+@mixin triangle($size, $color, $direction) {
+
+    height: 0px;
+    width: 0px;
+
+    border-color: transparent;
+    border-style: solid;
+    border-width: math.div($size, 2);
+
+    @if $direction == up {
+        border-bottom-color: $color;
+    }
+
+    @else if $direction == down {
+        border-top-color: $color; 
+    }
 }

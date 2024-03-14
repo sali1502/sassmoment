@@ -13,7 +13,7 @@
     grid-template-columns: 2fr;
     grid-gap: 0px;
     padding: 0px;
-    background-color: base.$primary-bg;
+    background-color: base.$white;
     padding: 0px;
     width: 80%;
     max-width: 1512px;
@@ -246,6 +246,12 @@ footer p {
     @include base.circle (10px, 10px, base.$dark-green);
 }
   
+.arrow {
+    margin: 0 auto;
+    margin-top: 2vh;
+    margin-bottom: 2vh;
+    @include base.triangle (20px, base.$dark-green, down);
+}
 
 /* Media querys */
 
