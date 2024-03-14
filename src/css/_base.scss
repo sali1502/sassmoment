@@ -1,6 +1,9 @@
 @use "sass:math";
 
-// Variabler color functions
+// Variabel font
+$font-stack: Arial, sans-serif;
+
+// Variabler "color functions"
 $primary-green: #5F8575;
 $dark-green: darken($primary-green, 20%);
 $light-green: lighten($primary-green, 20%);
@@ -31,7 +34,6 @@ $primary-header-footer-darkm: $light-green;
 }
 
 // If-else sats
-
 @mixin triangle($size, $color, $direction) {
 
     height: 0px;

@@ -35,7 +35,7 @@ header {
 }
 
 .navigation a {
-    color: #000000;
+    color: base.$black;
     font-size: 0.8em;
     margin: 0;
     text-decoration: none;
@@ -106,7 +106,7 @@ nav li:hover {
     display: block;
     width: 20px;
     height: 3px;
-    background-color: #000000;
+    background-color: base.$black;
     margin: 5px 0;
 }
 
@@ -138,7 +138,7 @@ nav li:hover {
 
 body {
     background-color: base.$primary-bg;
-    font-family: Verdana, sans-serif;
+    font: 100% base.$font-stack;
     font-weight: 400;
     font-size: 0.9em;
     line-height: 1.8em;
@@ -147,12 +147,13 @@ body {
 }
 
 h1 {
+    font: 100% base.$font-stack;
     margin: 0 auto 0 auto;
     font-size: 2.5em;
     line-height: 1.4em;
     text-align: center;
-    padding-top: 8vh;
-    padding-bottom: 3vh;
+    padding-top: 4vh;
+    padding-bottom: 2vh;
     color: base.$primary-text;
     max-width: 550px;
     color: base.$dark-green;
@@ -162,96 +163,123 @@ p {
     margin: 0 auto 0 auto;
     font-size: 1em;
     line-height: 1.8em;
-    text-align: center;
-    color: base.$primary-text;
-    max-width: 550px;
-}
-
-ul {    
-    margin: 0 auto 0 auto;
     text-align: left;
-    font-size: 1em;
-    line-height: 1.8em;
-    color: base.$primary-text;
-    max-width: 550px;
-}
-
-.space1 {
-    height: 4vh;
-}
-
-.space2 {
-    height: 2vh;
-}
-
-.text-container {
-    margin: 0 auto 0 auto;
-    text-align: left;
-    font-size: 1em;
-    line-height: 1.8em;
-    color: base.$primary-text;
-    min-width: 500px;
-    max-width: 500px;
-}
-
-footer {
-    font-size: 0.9em;
-    line-height: 2em;
-    height: auto;
-    background-color: base.$light-green;
-    margin-top: 6vh;
-    position: relative;
-    padding-right: 10vw;
-    padding-left: 10vw;
-    padding-top: 2vh;
-    padding-bottom: 2vh;
-    width: 100%;
-    text-align: center;
-    font-weight: 400;
-    max-width: 1512px;
-}
-
-footer p {
-    color: base.$primary-text;
-    text-align: center;
-}
-
-.image-container {
-    display: block;
-    justify-content: center;
-    margin: 0 auto 0 auto;
-    text-align: center;
-    max-width: 900px;
-}
-
-.text {
-    color: base.$primary-text;
-}
-
-.onedot {
-    margin: 0 auto;
-    margin-bottom: 2vh;
-    @include base.circle (10px, 10px, base.$light-green);
-}
-
-.twodot {
-    margin: 0 auto;
-    margin-bottom: 2vh;
-    @include base.circle (10px, 10px, base.$primary-green);
-}
-
-.threedot {
-    margin: 0 auto;
-    margin-bottom: 2vh;
-    @include base.circle (10px, 10px, base.$dark-green);
-}
-  
-.arrow {
-    margin: 0 auto;
-    margin-top: 2vh;
-    margin-bottom: 2vh;
-    @include base.triangle (20px, base.$dark-green, down);
-}
+        color: base.$primary-text;
+        max-width: 550px;
+    }
+    
+    ul {
+        margin: 0 auto 0 auto;
+        text-align: left;
+        font-size: 1em;
+        line-height: 1.8em;
+        color: base.$primary-text;
+        max-width: 550px;
+    }
+    
+    .space1 {
+        height: 4vh;
+    }
+    
+    .space2 {
+        height: 2vh;
+    }
+    
+    .text-container {
+        margin: 0 auto 0 auto;
+        text-align: left;
+        font-size: 1em;
+        line-height: 1.8em;
+        color: base.$primary-text;
+        max-width: 600px;
+    }
+    
+    footer {
+        font-size: 0.9em;
+        line-height: 2em;
+        height: auto;
+        background-color: base.$light-green;
+        margin-top: 4vh;
+        position: relative;
+        padding-right: 10vw;
+        padding-left: 10vw;
+        padding-top: 2vh;
+        padding-bottom: 2vh;
+        width: 100%;
+        text-align: center;
+        font-weight: 400;
+        max-width: 1512px;
+    }
+    
+    footer p {
+        color: base.$primary-text;
+        text-align: center;
+    }
+    
+    .image-container {
+        display: block;
+        justify-content: center;
+        margin: 0 auto 0 auto;
+        text-align: center;
+        max-width: 900px;
+    }
+    
+    .text {
+        color: base.$primary-text;
+    }
+    
+    // Mixins
+    .onedot {
+        margin: 0 auto;
+        margin-bottom: 2vh;
+        @include base.circle (10px, 10px, base.$light-green);
+    }
+    
+    .twodot {
+        margin: 0 auto;
+        margin-bottom: 2vh;
+        @include base.circle (10px, 10px, base.$primary-green);
+    }
+    
+    .threedot {
+        margin: 0 auto;
+        margin-bottom: 2vh;
+        @include base.circle (10px, 10px, base.$dark-green);
+    }
+    
+    .arrow {
+        margin: 0 auto;
+        margin-top: 2vh;
+        margin-bottom: 2vh;
+        @include base.triangle (16px, base.$dark-green, down);
+    }
+    
+    // Nästlad lista
+    div {
+    
+        margin: 0 auto;
+    
+        ul {
+            padding: 0;
+            color: aqua;
+            padding-left: 4vw;
+            padding-top: 2vh;
+            padding-bottom: 2vh;
+        }
+    
+        li {
+            color: base.$light-green;
+            padding-left: 6px;
+        }
+    
+        a {
+            color: base.$black;
+            padding-left: 6px;
+            padding-top: 6px;
+            text-decoration: none;
+        }
+    
+    }
 
 /* Media querys */
 
