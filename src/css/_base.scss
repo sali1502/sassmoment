@@ -43,11 +43,11 @@ $primary-header-footer-darkm: $light-green;
     border-style: solid;
     border-width: math.div($size, 2);
 
-    @if $direction == up {
+    @if $direction ==up {
         border-bottom-color: $color;
     }
 
-    @else if $direction == down {
-        border-top-color: $color; 
+    @else if $direction ==down {
+        border-top-color: $color;
     }
 }

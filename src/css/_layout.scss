@@ -253,11 +253,12 @@ footer p {
     margin-bottom: 2vh;
     @include base.triangle (16px, base.$dark-green, down);
 }
- 
+
 // Selector inheritance
 .dotone {
     @extend .onedot;
 }
+
 .dottwo {
     @extend .twodot;
 }
