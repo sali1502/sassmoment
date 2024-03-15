@@ -1,4 +1,5 @@
 @use 'base';
+@use 'keyframes';
 
 * {
     margin: 0;
@@ -300,6 +301,28 @@ div {
         text-decoration: none;
     }
 
+}
+
+// Element som ändrar färg och rör sig vid hoover
+.backgroundTransition {
+    width: 150px;
+    height: 50px;
+    background-color: base.$light-green;
+    border-radius: 50;
+    margin: 0 auto 0 auto;
+    text-align: center;
+    padding-top: 2vh;
+
+}
+
+.backgroundTransition:hover {
+    animation:  colorChange 2s 0s infinite both ease-out;
+}
+
+#jumpingDot {
+    margin-top: 40vh;
+    @extend .threedot;
+    animation: jumpingDot 4s 2s infinite alternate linear;
 }
 
 /* Media querys */
